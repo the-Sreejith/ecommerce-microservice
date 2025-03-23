@@ -8,12 +8,12 @@ services:
     environment:
       - NODE_ENV=development
       - DATABASE_URL=postgresql://postgres:password@db:5432/ecommerce_user_service?schema=public
-      # - DB_HOST=db
-      # - DB_USER=postgres
-      # - DB_PASSWORD=password
-      # - DB_NAME=ecommerce_user_service
-      # - DB_PORT=5432
-      # - DB_SSL=false
+      - DB_HOST=db
+      - DB_USER=postgres
+      - DB_PASSWORD=password
+      - DB_NAME=ecommerce_user_service
+      - DB_PORT=5432
+      - DB_SSL=false
       - JWT_SECRET=local-development-secret
       - PORT=3000
     depends_on:

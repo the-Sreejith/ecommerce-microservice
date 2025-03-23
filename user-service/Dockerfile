@@ -6,6 +6,8 @@ COPY package*.json ./
 
 RUN npm install
 
+RUN npm migrate
+
 COPY . .
 
 EXPOSE 3000

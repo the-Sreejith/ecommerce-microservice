@@ -1,9 +1,26 @@
+const { Sequelize } = require('sequelize');
+const dbConfig = require('./config');
+
+const sequelize = new Sequelize(
+  dbConfig.database,
+  dbConfig.username,
+  dbConfig.password,
+  {
+    host: dbConfig.host,
+    port: dbConfig.port,
+    dialect: dbConfig.dialect,
+    dialectOptions: dbConfig.dialectOptions,
+    pool: dbConfig.pool,
+    logging: dbConfig.logging
+  }
+);
+
 async function testConnection() {
   try {
     await sequelize.authenticate();
-    console.log('Database connection established');
+    console.log("Database connection established");
   } catch (error) {
-    console.error('Unable to connect to the database:', error);
+    console.error("Unable to connect to the database:", error);
     process.exit(1);
   }
 }
@@ -12,13 +29,14 @@ async function testConnection() {
 testConnection();
 
 // Graceful shutdown
-process.on('SIGINT', async () => {
+process.on("SIGINT", async () => {
   await sequelize.close();
-  console.log('Database connection closed');
+  console.log("Database connection closed");
   process.exit(0);
 });
 
 module.exports = sequelize;
+
 
 // import { Sequelize } from 'sequelize';
 // import dotenv from 'dotenv';

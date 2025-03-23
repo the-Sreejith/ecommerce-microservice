@@ -84,7 +84,7 @@ const Session = sequelize.define('Session', {
     allowNull: false
   },
   token: {
-    type: DataTypes.STRING,
+    type: DataTypes.TEXT,
     unique: true,
     allowNull: true
   },

@@ -1,6 +1,3 @@
-// -------------------------
-// tests/integration/auth.test.js
-// -------------------------
 const request = require('supertest');
 const app = require('../../src/app');
 const prisma = require('../../src/config/db');
