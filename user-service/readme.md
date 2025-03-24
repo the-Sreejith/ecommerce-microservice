@@ -16,7 +16,7 @@
   
   - Node.js
   - Express.js
-  - Prisma ORM
+  - Sequelize ORM
   - PostgreSQL
   - JWT
   - bcrypt for password hashing

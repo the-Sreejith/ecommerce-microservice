@@ -1,0 +1,45 @@
+{
+  "name": "product-service",
+  "version": "1.0.0",
+  "description": "Product microservice for e-commerce application",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest --coverage",
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "microservice",
+    "ecommerce",
+    "products",
+    "express",
+    "dynamodb"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.x.x",
+    "@aws-sdk/lib-dynamodb": "^3.x.x",
+    "amqplib": "^0.10.x",
+    "aws-sdk": "^2.x.x",
+    "cors": "^2.8.x",
+    "dotenv": "^16.x.x",
+    "express": "^4.x.x",
+    "product-service": "file:",
+    "uuid": "^9.x.x",
+    "winston": "^3.x.x"
+  },
+  "devDependencies": {
+    "eslint": "^8.x.x",
+    "jest": "^29.x.x",
+    "nodemon": "^3.x.x",
+    "supertest": "^6.x.x"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}
